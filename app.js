@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var handlebars = require('express3-handlebars');
 var http = require('http');
-//var routes = require('./routes/index');
+var routes = require('./routes/index');
 
 var app = express();
 
@@ -21,10 +21,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 //routes
 app.get('/', function(req, res){
   res.render('index');
 });
+
 app.get('/statistic', function(req, res){
   res.render('statistic');
 });
