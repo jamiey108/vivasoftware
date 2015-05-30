@@ -31,6 +31,10 @@ app.get('/statistic', function(req, res){
   res.render('statistic');
 });
 
+app.get('/wells', function(req, res){
+  res.render('wells');
+});
+
 
 http.createServer(app).listen(3000, function() {
     console.log('Express server listening on port ' + 3000);
